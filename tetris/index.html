@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid #000;
+            width: 300px;
+            height: 600px;
+            display: block; 
+        }
+        #score {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        #playerIp {
+            margin-top: 20px;
+        }
+        #gameOver {
+            display: none;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div id="score">Score: 0</div>
+        <div id="playerIp"></div>
+        <div id="victoryMessage" style="display:none; color: green; font-size: 20px;">Você Venceu!</div>
+        <div id="gameOver" style="display:none; color: red; font-size: 20px;">Perdeu!</div>
+    </div>
+<link rel="stylesheet" href="style.css">
+    <script src="tetris.js"></script>
+</body>
+</html>
