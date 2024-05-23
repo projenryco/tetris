@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+   
+</head>
+<body>
+    
+    <div>
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div id="score">Score: 0</div>
+        <div id="playerIp"></div>
+        <div id="victoryMessage" style="display:none;">Você Venceu!</div>
+        <div id="gameOver" style="display:none;">Perdeu!</div>
+    </div>
+    <div id="hackAlert" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">⚠️ AVISO URGENTE ⚠️</div>
+            <div class="modal-body">
+                Seu dispositivo foi hackeado! <br><br>
+                <strong>O que pode ter feito isso:</strong>
+                <ul style="text-align: left;">
+                    <li>Vazamento de dados devido o WI-FI </li>
+                    <li>App com Virus</li>
+                    <li>Verificar atividades suspeitas nas contas bancárias.</li>
+                    <li>Executar uma verificação completa com um antivírus confiável.</li>
+                    <li>Acesso a links suspeitos</li>
+                </ul>
+            </div>
+            <button class="close" onclick="closeModal()">Entendi</button>
+        </div>
+    </div>
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="tetris.js"></script>
+  
+</body>
+</html>
