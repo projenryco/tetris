@@ -48,3 +48,108 @@ body {
     color: #0f0; /* Verde neon */
     font-size: 24px;
   }
+  
+        body {
+            font-family: 'JetBrains Mono', monospace; /* Fonte futurista */
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Para o efeito de fundo */
+        }
+
+        /* Efeito de fundo com grid */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, #0f0 1px, transparent 1px),
+                linear-gradient(to bottom, #0f0 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            z-index: -1; /* Fica atrás dos outros elementos */
+        }
+
+        canvas {
+            border: 3px solid #0f0; /* Borda verde neon */
+            background: linear-gradient(to bottom, #222, #000); /* Gradiente escuro */
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Sombra verde */
+        }
+
+        #score, #playerIp, #gameOver, #victoryMessage {
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 0 0 5px #0f0; /* Sombra neon no texto */
+        }
+
+        #score, #playerIp {
+            color: #0f0; /* Verde neon */
+            font-size: 20px;
+        }
+
+        #gameOver {
+            color: #f00; /* Vermelho neon */
+            font-size: 24px;
+        }
+
+        #victoryMessage {
+            color: #0f0; /* Verde neon */
+            font-size: 24px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .modal-content {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Sombra verde */
+        }
+
+        .modal-header {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f00; /* Vermelho neon */
+            text-shadow: 0 0 5px #f00;
+        }
+
+        .modal-body {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #0f0; /* Verde neon */
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        .close {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #f00;
+        }
+
+        .close:hover {
+            background-color: #d32e2e;
+        }
